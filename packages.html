@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Travel packages — Rahwa Travel" />
+    <title>Packages — Rahwa Travel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Rahwa Travel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="packages.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5 mt-5">
+        <h1 class="mb-4">Our Packages</h1>
+        <p class="text-muted">Choose from our popular themes — all customizable.</p>
+        <div class="row g-4 mt-3">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=1200&q=80&auto=format&fit=crop" class="card-img-top" alt="Romantic couple on a beach">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Honeymoon Special</h5>
+                        <p class="card-text">7 nights luxury resort, private dinner, spa credits.</p>
+                        <ul>
+                            <li>Airport transfers</li>
+                            <li>Breakfast included</li>
+                            <li>Romantic extras</li>
+                        </ul>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <strong>$2,999</strong>
+                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookingModal">Inquire</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80&auto=format&fit=crop" class="card-img-top" alt="Safari lodge at sunset">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Adventure Safari</h5>
+                        <p class="card-text">Guided game drives, guided walking safaris, luxury tented camps.</p>
+                        <ul>
+                            <li>Expert guides</li>
+                            <li>All meals included</li>
+                            <li>Transfers</li>
+                        </ul>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <strong>$3,850</strong>
+                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookingModal">Inquire</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&q=80&auto=format&fit=crop" class="card-img-top" alt="Family on vacation at pool">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Family Fun</h5>
+                        <p class="card-text">Kid-friendly resorts, activities, and babysitting options.</p>
+                        <ul>
+                            <li>Family rooms</li>
+                            <li>Child programs</li>
+                            <li>Discounted child rates</li>
+                        </ul>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <strong>$1,899</strong>
+                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookingModal">Inquire</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+        <h3>Custom Packages</h3>
+        <p class="text-muted">Can't find exactly what you want? Send us your travel ideas and we'll build a custom package.</p>
+        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Request a Custom Plan</button>
+    </main>
+
+    <!-- reuse booking modal from index (simple copy) -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalLabel">Booking Inquiry</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingFormPackages" novalidate>
+                        <div class="mb-3">
+                            <label for="pname" class="form-label">Full name</label>
+                            <input type="text" class="form-control" id="pname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pemail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="pemail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pdetails" class="form-label">Preferences / Questions</label>
+                            <textarea id="pdetails" class="form-control" rows="3" required></textarea>
+                        </div>
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
